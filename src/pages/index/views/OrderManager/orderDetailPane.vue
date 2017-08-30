@@ -115,7 +115,7 @@
           <el-col>
             <span style="color: #98a8b8;">收货信息&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <span>收货人: 乐毅&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <span>联系方式: 13758087094&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>联系方式: 18811112222&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <span>收货地址: 嘉兴市南湖区富路润300号嘉兴电子商务产业园3号园嘉兴麦云科技&nbsp;&nbsp;&nbsp;&nbsp;</span>
           </el-col>
         </el-row>

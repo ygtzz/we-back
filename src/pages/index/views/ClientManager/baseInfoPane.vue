@@ -164,10 +164,10 @@
             id: this.clientId,
             name: 'test',
             head: 'http://img4.imgtn.bdimg.com/it/u=157241173,3207275343&fm=26&gp=0.jpg',
-            phone: '13758087094',
-            pcdDes: ['浙江省', '嘉兴市', '南湖区'],
+            phone: '18811112222',
+            pcdDes: ['北京市', '北京市', '朝阳区'],
             pcdCodes: [100001, 120001, 121001],
-            address: '富润路300号嘉兴麦云科技',
+            address: '北京市朝阳区',
             timestamp: '2017-07-17 12:12:12',
             ordertime: '2017-07-17 12:12:12',
             status: 1
