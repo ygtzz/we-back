@@ -21,6 +21,8 @@ import vueWaves from './widget/directive/waves';// 水波纹指令
 import errLog from './vuex/errLog';// error log组件
 import mixins from './widget/mixins';
 import 'assets/css/index.scss'; // 全局自定义的css样式
+import 'assets/iconfont/iconfont.js';
+import iconSvg from 'widget/iconSvg/index.vue';
 
 Vue.use(AjaxPlugin);
 Vue.use(inputPrice);
@@ -28,7 +30,7 @@ Vue.use(inputQuantity);
 Vue.use(ElementUI);
 Vue.use(vueWaves);
 Vue.mixin(mixins);
-
+Vue.component('icon-svg', iconSvg);
 // error，loading是图片路径, 用require引入
 Vue.use(VueLazyload, {
   preLoad: 1.3,

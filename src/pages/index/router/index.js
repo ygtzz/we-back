@@ -48,7 +48,7 @@ export const asyncRouterMap = [
     component: Layout,
     redirect: '/dashboard/index',
     name: '首页',
-    icon: 'fa-home',
+    icon: 'homepage_fill',
     noDropdown: true,
     children: [{path: 'index', component: Bashboard, name: '首页', meta: {keepAlive: false}}]
   },
@@ -57,7 +57,7 @@ export const asyncRouterMap = [
     component: Layout,
     redirect: '/client-manager',
     name: '客户管理',
-    icon: 'fa-users',
+    icon: 'order_fill',
     noDropdown: true,
     children: [
       {path: 'client-manager', component: ClientList, name: '客户管理', meta: {keepAlive: true}},
@@ -69,7 +69,7 @@ export const asyncRouterMap = [
     component: Layout,
     redirect: '/good/good-manager',
     name: '商品管理',
-    icon: 'fa-gift',
+    icon: 'workbench_fill',
     children: [
       {path: 'good-manager', component: GoodList, name: '商品列表', meta: {keepAlive: true}},
       {path: 'add-good', component: AddGood, name: '新增商品', hidden: true, meta: {keepAlive: false}},
@@ -81,7 +81,7 @@ export const asyncRouterMap = [
     component: Layout,
     redirect: '/demo/index',
     name: '示例',
-    icon: 'fa-home',
+    icon: 'activity_fill',
     noDropdown: true,
     children: [{path: 'index', component: demo, name: '示例', meta: {keepAlive: false}}]
   },
