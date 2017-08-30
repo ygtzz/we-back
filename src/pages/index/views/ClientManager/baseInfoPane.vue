@@ -94,33 +94,33 @@
         pcdList: [
           {
             value: 100001,
-            label: '浙江省',
+            label: '北京',
             children: [
               {
                 value: 110001,
-                label: '杭州市',
+                label: '北京市',
                 children: [
                   {
                     value: 111001,
-                    label: '西湖区'
+                    label: '昌平区'
                   },
                   {
                     value: 111002,
-                    label: '上城区'
+                    label: '海淀区'
                   }
                 ]
               },
               {
                 value: 120001,
-                label: '嘉兴市',
+                label: '北京市',
                 children: [
                   {
                     value: 121001,
-                    label: '南湖区'
+                    label: '朝阳区'
                   },
                   {
                     value: 121002,
-                    label: '秀洲区'
+                    label: '通州区'
                   }
                 ]
               }
