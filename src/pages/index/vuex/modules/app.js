@@ -20,6 +20,7 @@ const app = {
     },
     ADD_VISITED_VIEWS: (state, view) => {
       if (state.visitedViews.some(v => v.path === view.path)) {
+        console.log('return')
         return;
       }
       state.visitedViews.push({name: view.name, path: view.path});

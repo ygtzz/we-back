@@ -15,15 +15,15 @@
 
   export default {
     name: 'Layout',
-    components: {
-      Navbar,
-      Sidebar,
-      AppMain
-    },
     computed: {
       sidebar() {
         return this.$store.state.app.sidebar;
       }
+    },
+    components: {
+      Navbar,
+      Sidebar,
+      AppMain
     }
   };
 </script>

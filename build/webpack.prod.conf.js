@@ -68,7 +68,7 @@ module.exports = merge(baseWebapckConfig, {
         vendor: ['vue', 'vuex', 'vue-router', 'vuex-router-sync','vue-resource']
     },
     output: {
-        publicPath:'/backend',
+        publicPath:'/',
         path: config.sDest,
         filename: config.prod.path.script + '[name].[chunkhash:8].js',
         chunkFilename: config.prod.path.script + "[name].[chunkhash:8].js"

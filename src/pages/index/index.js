@@ -84,9 +84,21 @@ router.beforeEach((to, from, next) => {
   }
 });
 
+function generateRoute(router) {
+  if (router.matched[router.matched.length - 1].name) {
+    return router.matched[router.matched.length - 1];
+  }
+  router.matched[0].path = '/';
+  return router.matched[0];
+}
 
-router.afterEach(() => {
+function addViewTabs(route) {
+  store.dispatch('addVisitedViews', generateRoute(route));
+}
+
+router.afterEach(route => {
   NProgress.done(); // 结束Progress
+  addViewTabs(route);
 });
 
 // 生产环境错误日志
