@@ -200,7 +200,7 @@
     {
       id: 100001,
       title: '轮播图1',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -208,7 +208,7 @@
     {
       id: 100002,
       title: '轮播图2',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -216,7 +216,7 @@
     {
       id: 100003,
       title: '轮播图3',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 0
@@ -224,7 +224,7 @@
     {
       id: 100004,
       title: '轮播图4',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -232,7 +232,7 @@
     {
       id: 100005,
       title: '轮播图5',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -240,7 +240,7 @@
     {
       id: 100006,
       title: '轮播图6',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -248,7 +248,7 @@
     {
       id: 100007,
       title: '轮播图7',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -256,7 +256,7 @@
     {
       id: 100008,
       title: '轮播图8',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 0
@@ -264,7 +264,7 @@
     {
       id: 100009,
       title: '轮播图9',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -272,7 +272,7 @@
     {
       id: 100010,
       title: '轮播图10',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -280,7 +280,7 @@
     {
       id: 100011,
       title: '轮播图11',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -288,7 +288,7 @@
     {
       id: 100012,
       title: '轮播图12',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -296,7 +296,7 @@
     {
       id: 100013,
       title: '轮播图13',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -304,7 +304,7 @@
     {
       id: 100014,
       title: '轮播图14',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -312,7 +312,7 @@
     {
       id: 100015,
       title: '轮播图15',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -320,7 +320,7 @@
     {
       id: 100016,
       title: '轮播图16',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -328,7 +328,7 @@
     {
       id: 100017,
       title: '轮播图17',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -336,7 +336,7 @@
     {
       id: 100018,
       title: '轮播图18',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -344,7 +344,7 @@
     {
       id: 100019,
       title: '轮播图19',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -352,7 +352,7 @@
     {
       id: 100020,
       title: '轮播图20',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -360,7 +360,7 @@
     {
       id: 100021,
       title: '轮播图21',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -368,7 +368,7 @@
     {
       id: 100022,
       title: '轮播图22',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -376,7 +376,7 @@
     {
       id: 100023,
       title: '轮播图23',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -384,7 +384,7 @@
     {
       id: 100024,
       title: '轮播图24',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -392,7 +392,7 @@
     {
       id: 100025,
       title: '轮播图25',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -400,7 +400,7 @@
     {
       id: 100026,
       title: '轮播图26',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -408,7 +408,7 @@
     {
       id: 100027,
       title: '轮播图27',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -416,7 +416,7 @@
     {
       id: 100028,
       title: '轮播图28',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -424,7 +424,7 @@
     {
       id: 100029,
       title: '轮播图29',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1
@@ -432,7 +432,7 @@
     {
       id: 100030,
       title: '轮播图30',
-      auditor: 'leyi',
+      auditor: 'test',
       timestamp: '2017-07-17 12:12:12',
       url: 'http://img1.imgtn.bdimg.com/it/u=4024981923,3433833314&fm=26&gp=0.jpg',
       status: 1

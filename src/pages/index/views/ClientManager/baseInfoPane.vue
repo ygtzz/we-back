@@ -162,7 +162,7 @@
         setTimeout(() => {
           this.baseInfo = {
             id: this.clientId,
-            name: 'leyi',
+            name: 'test',
             head: 'http://img4.imgtn.bdimg.com/it/u=157241173,3207275343&fm=26&gp=0.jpg',
             phone: '13758087094',
             pcdDes: ['浙江省', '嘉兴市', '南湖区'],
