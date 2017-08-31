@@ -7,6 +7,8 @@ import Login from '../views/Login/index.vue';
 // const authRedirect = _import('Login/authredirect');
 /* dashboard */
 import Bashboard from '../views/Bashboard/index.vue';
+/* swiper manager */
+import {AddSwiper, SwiperList} from '../views/SwiperManager';
 /* client manager */
 import {EditClient, ClientList} from '../views/ClientManager';
 /* good manager */
@@ -53,6 +55,17 @@ export const asyncRouterMap = [
     icon: 'homepage_fill',
     noDropdown: true,
     children: [{path: 'index', component: Bashboard, name: '首页', meta: {keepAlive: false}}]
+  },
+  {
+    path: '/web',
+    component: Layout,
+    redirect: '/web/swiper-manager',
+    name: '官网设置',
+    icon: 'activity_fill',
+    children: [
+      {path: 'swiper-manager', component: SwiperList, name: '轮播图设置', meta: {keepAlive: true}},
+      {path: 'add-swiper', component: AddSwiper, name: '新增轮播图', hidden: true, meta: {keepAlive: false}}
+    ]
   },
   {
     path: '/client',
