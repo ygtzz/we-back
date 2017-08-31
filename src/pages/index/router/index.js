@@ -13,6 +13,8 @@ import {EditClient, ClientList} from '../views/ClientManager';
 import {AddGood, GoodList} from '../views/GoodManager';
 /* category manager */
 import CategoryManager from '../views/CategoryManager/index.vue';
+/* order manager */
+import {OrderList, EditOrder} from '../views/OrderManager';
 /* error page */
 import Err404 from '../views/Error/404.vue';
 import Err401 from '../views/Error/401.vue';
@@ -74,6 +76,17 @@ export const asyncRouterMap = [
       {path: 'good-manager', component: GoodList, name: '商品列表', meta: {keepAlive: true}},
       {path: 'add-good', component: AddGood, name: '新增商品', hidden: true, meta: {keepAlive: false}},
       {path: 'category-manager', component: CategoryManager, name: '商品分类设置', meta: {keepAlive: false}}
+    ]
+  },
+  {
+    path: '/order',
+    component: Layout,
+    redirect: '/order/order-manager',
+    name: '订单管理',
+    icon: 'order_fill',
+    children: [
+      {path: 'order-manager', component: OrderList, name: '订单列表', meta: {keepAlive: true}},
+      {path: 'edit-order', component: EditOrder, name: '订单详情', hidden: true, meta: {keepAlive: false}}
     ]
   },
   {
