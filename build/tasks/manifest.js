@@ -1,12 +1,14 @@
-
 module.exports = function (gulp, plugin, config) {
     var sBase = config.sDest;
     gulp.task('manifest', function () {
         return gulp.src(sBase + '/*.html')
-            .pipe(plugin.inject(gulp.src(sBase + '/chunk-manifest.json'), {
+            //根目录 sBase + '/manifest.js'
+            //所有子目录 sBase + '/**/manifest.*.js'
+            .pipe(plugin.inject(gulp.src(sBase + '/**/manifest.*.js'), {
                 starttag: '<!-- inject:manifest -->',
                 transform: function (filePath, file) {
-                    return '<script> window.webpackManifest=' + file.contents.toString('utf8') + '</script>';
+                    console.log(file);
+                    return '<script>' + file.contents.toString('utf8') + '</script>';
                 }
             }))
             .pipe(gulp.dest(sBase));

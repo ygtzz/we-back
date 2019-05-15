@@ -62,7 +62,7 @@
   };
 </script>
 
-<style rel="stylesheet/scss" lang="sass" scoped>
+<style rel="stylesheet/scss" lang="scss" scoped>
   .navbar {
     height: 50px;
     line-height: 50px;

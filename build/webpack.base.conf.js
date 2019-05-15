@@ -1,53 +1,47 @@
 var webpack = require('webpack');
-var CleanWebpackPlugin = require('clean-webpack-plugin');
-var autoprefixer = require('autoprefixer');
 var config = require('./config');
 var merge = require('lodash/merge');
 var path = require('path');
+var VueLoaderPlugin = require('vue-loader/lib/plugin');
 var sBase = config.sBase;
+
+process.noDeprecation = true;
 
 function resolve (dir) {
     return path.join(__dirname, '..', dir)
 }
 
-var aPlugin = [];
-// var aPostcss = [autoprefixer({browsers: ['> 5%','ie 9']})];
-var aPostcss = [];
 
 module.exports = {
     entry: config.entry,
     output: {
-        // path: config.sDist,
-        path:path.resolve(__dirname, '../dist'),
-        publicPath:'/',
+        path: config.sDist,
         filename: '[name].js',
         chunkFilename: "[name].js"
     },
     module: {
-        loaders: [
-            {test: /\.js$/, loader: "babel", include:[resolve('src')]},
-            {test: /\.(html)$/, loader: 'html'},
-            {test: /\.vue$/, loader: 'vue'},
+        rules: [
+            {test: /\.(js|jsx)$/, loader: "babel-loader", exclude: /node_modules/},
+            {test: /\.(html)$/, loader: 'html-loader'},
             {
                 test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-                loader: 'url',
-                query: {
-                    limit: 10000,
+                loader: 'url-loader',
+                options: {
+                    limit: 1,
                     name:'/static/fonts/[name].[ext]'
                 }
             }
         ]
     },
-    plugins: aPlugin,
-    postcss: function () {
-        return aPostcss;
-    },
+    plugins: [
+        new VueLoaderPlugin()
+    ],
     resolve:{
-        modulesDirectories: [ "node_modules",sBase,sBase+"pages", sBase+"widget"],
-        extensions:['','.vue','.js','.json'],
+        modules: [ "node_modules", resolve('src'), sBase, sBase+"pages", sBase+"widget",sBase+'mock',sBase+'assets'],
+        extensions:['.vue','.js','.json'],
         alias: {
-            '@': resolve('src'),
-            'vue': 'vue/dist/vue.js'
+            'vue': 'vue/dist/vue.js',
+            '@': resolve('src')
         }
     }
 }

@@ -180,8 +180,8 @@
     }
   };
 </script>
-<style rel="stylesheet/scss" lang="sass" scoped>
-  @import "../../../../assets/css/mixin.scss";
+<style rel="stylesheet/scss" lang="scss" scoped>
+  @import "~assets/css/mixin.scss";
   
   .title-prompt {
     position: absolute;

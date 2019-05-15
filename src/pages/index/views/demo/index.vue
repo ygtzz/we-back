@@ -16,7 +16,7 @@
   };
 </script>
 
-<style rel="stylesheet/scss" lang="sass" scoped>
+<style rel="stylesheet/scss" lang="scss" scoped>
   .dashboard-editor-container {
     margin: 30px;
     .btn-group {

@@ -1,11 +1,10 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var AssetsPlugin = require('assets-webpack-plugin');
-var ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
 var LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 var merge = require('webpack-merge');
 var WebpackChunkHash = require('webpack-chunk-hash');
+var MiniCssExtractPlugin = require("mini-css-extract-plugin"); 
+var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 var baseWebapckConfig = require('./webpack.base.conf');
 var config = require('./config');
 
@@ -13,37 +12,18 @@ var oEntry = baseWebapckConfig.entry,
     aEntry = Object.keys(oEntry);
 
 var aPlugin = [
-    new webpack.optimize.CommonsChunkPlugin({
-        names: ['common','vendor'],
-        minChunks: 2
-    }),
-    new ExtractTextPlugin(config.prod.path.style + '[name].[contenthash:8].css',{
-        allChunks: true
+    new MiniCssExtractPlugin({
+    　　filename: config.prod.path.style + "[name].[chunkhash:8].css",
+    　　chunkFilename: config.prod.path.style + "[name].[chunkhash:8].css"
     }),
     new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify('production'),
         __DEV__: JSON.stringify(JSON.parse('false'))
     }),
-    new webpack.optimize.UglifyJsPlugin({
-        compress: {
-            warnings: false
-        }
-    }),
     new LodashModuleReplacementPlugin(),
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new AssetsPlugin({
-      filename: config.sDest + '/map.json',
-      prettyPrint: true,
-      includeManifest: false
-    }),
-    new ChunkManifestPlugin({
-      filename: "chunk-manifest.json",
-      manifestVariable: "webpackManifest"
-    }),
-    new webpack.optimize.OccurenceOrderPlugin(true),    
-    new WebpackChunkHash({algorithm: 'md5'}),
-    // DedupePlugin disabled. It breaks module IDs across builds (even when using recordsPath option)
-    //new webpack.optimize.DedupePlugin() 
+    new webpack.HashedModuleIdsPlugin(),    
+    new WebpackChunkHash(),
+    new BundleAnalyzerPlugin()
 ];
 
 //html webpack
@@ -51,7 +31,7 @@ aEntry.forEach(function(item) {
     aPlugin.push(new HtmlWebpackPlugin({
         filename: item + '.html',
         template: config.sBase + 'pages/' + item + '/' + item + '.ejs',
-        chunks: [item, 'vendor', 'common'],
+        chunks: ['vendor', 'common', item],
         inject: 'body',
         title: item + 'Page',
         minify: {
@@ -64,59 +44,147 @@ aEntry.forEach(function(item) {
 });
 
 module.exports = merge(baseWebapckConfig, {
-    entry: {
-        vendor: ['vue', 'vuex', 'vue-router', 'vuex-router-sync','vue-resource']
-    },
+    mode: 'production',
+    // entry: {
+    //     vendor: ['vue', 'vuex', 'vue-router', 'vuex-router-sync','vue-resource']
+    // },
     output: {
-        publicPath:'/',
-        path: config.sDest,
+        path: config.sDist,
         filename: config.prod.path.script + '[name].[chunkhash:8].js',
-        chunkFilename: config.prod.path.script + "[name].[chunkhash:8].js"
+        // filename: function(chunkData){
+        //     return chunkData.chunk.name === 'manifest' ? '[name].js': config.prod.path.script + "[name].[chunkhash:8].js";
+        // },
+        chunkFilename: config.prod.path.script + "[name].[chunkhash:8].js",
+        publicPath: '/'
     },
     module: {
-        loaders: [
-            {test: /\.css$/, loader: ExtractTextPlugin.extract('style','css!postcss')},
-            {test: /\.scss$/, loader: ExtractTextPlugin.extract('css!postcss!sass')},
+        rules: [
+            {   
+                test: /\.vue$/, loader: 'vue-loader',
+                options:{
+                    loaders: {
+                        css: "vue-style-loader!css-loader!postcss-loader",
+                        sass: "vue-style-loader!css-loader!postcss-loader!sass-loader",
+                        scss: "vue-style-loader!css-loader!postcss-loader!sass-loader"
+                    }
+                }
+            },
             {
-                test: /\.(svg)(\?.*)?$/,
-                loaders: [
-                    'url?limit=2048&name=/static/images/[name].[ext]'
+                test: /\.css$/,
+                use: [
+                    { loader: MiniCssExtractPlugin.loader },
+                    { 
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1
+                        } 
+                    },
+                    { loader: 'postcss-loader'}
                 ]
             },
             {
+                test: /\.scss$/, 
+                use: [
+                    { loader: MiniCssExtractPlugin.loader },
+                    { 
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 2
+                        } 
+                    },
+                    { loader: 'postcss-loader'},
+                    { loader: 'sass-loader' }
+                ]
+            },
+            // {
+            //     test: /\.(svg)(\?.*)?$/,
+            //     loader:'url',
+            //     options: {
+            //         limit: 2048,
+            //         name: '/static/images/[name].[ext]'
+            //     }
+            // },
+            {
                 test: /\.(png|jpe?g|gif)(\?.*)?$/,
-                loaders: [
-                    'url?limit=2048&name=/static/images/[name].[ext]',
-                    'image-webpack'
+                use: [
+                    {
+                        loader:'url-loader',
+                        options:{
+                            limit:2048,
+                            name:'/static/images/[name].[ext]'
+                        }
+                    },
+                    // {
+                    //     loader:'image-webpack-loader',
+                    //     options:{
+                    //         mozjpeg: {
+                    //             quality: 65
+                    //         },
+                    //         pngquant:{
+                    //             quality: "65-90",
+                    //             speed: 4
+                    //         },
+                    //         svgo:{
+                    //             plugins: [
+                    //                 {
+                    //                 removeViewBox: false
+                    //                 },
+                    //                 {
+                    //                 removeEmptyAttrs: false
+                    //                 }
+                    //             ]
+                    //         }
+                    //     }
+                    // }
                 ]
             }
         ]
     },
-    imageWebpackLoader: {
-        mozjpeg: {
-            quality: 65
+    optimization: {
+        minimize: true,
+        runtimeChunk: {
+            name: 'manifest'
         },
-        pngquant:{
-            quality: "65-90",
-            speed: 4
-        },
-        svgo:{
-            plugins: [
-                {
-                removeViewBox: false
+        splitChunks: {
+            automaticNameDelimiter:'-',
+            cacheGroups: {
+                vendor: {   // 抽离第三方插件
+                    test: /vue|vuex|vue-router|vue-router-sync|vue-resource/,   // 指定是node_modules下的第三方包 /[\\/]node_modules[\\/]/
+                    chunks: 'initial',
+                    name: 'vendor',  // 打包后的文件名，任意命名    
+                    // 设置优先级，防止和自定义的公共代码提取时被覆盖，不进行打包
+                    priority: 10    
                 },
-                {
-                removeEmptyAttrs: false
-                }
-            ]
-        }
-    },
-    vue: {
-        loaders: {
-            css: ExtractTextPlugin.extract('style','css!postcss'),
-            sass: ExtractTextPlugin.extract('css!postcss!sass')
+                common: { // 抽离自己写的公共代码，utils这个名字可以随意起
+                    test: /[\\/]node_modules[\\/]/,
+                    chunks: 'initial',
+                    name: 'common',  // 任意命名
+                    enforce: true
+                },
+                // 'async-vendors': {
+                //     test: /[\\/]node_modules[\\/]/,
+                //     minChunks: 2,
+                //     chunks: 'async',
+                //     name: 'async-vendors'
+                // }
+                // // 这里定义的是在分离前被引用过两次的文件，将其一同打包到common.js中，最小为30K
+                // common: {
+                //     name: "common",
+                //     minChunks: 2,
+                //     minSize: 30000
+                // },
+                // vendors: {
+                //     test: /[\\/]node_modules[\\/]/,
+                //     priority: -10
+                // },
+                // default: {
+                //     minChunks: 2,
+                //     priority: -20,
+                //     reuseExistingChunk: true
+                // }
+            }
         }
     },
     plugins: aPlugin,
-    devtool: 'cheap-module-source-map'
+    // devtool: 'cheap-module-source-map'
 });

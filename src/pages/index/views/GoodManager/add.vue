@@ -270,8 +270,8 @@
   };
 </script>
 
-<style rel="stylesheet/scss" lang="sass">
-  @import "../../../../assets/css/mixin.scss";
+<style rel="stylesheet/scss" lang="scss">
+  @import "~assets/css/mixin.scss";
   .title-prompt {
     position: absolute;
     right: 0px;

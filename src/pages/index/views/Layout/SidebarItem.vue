@@ -36,7 +36,7 @@
   };
 </script>
 
-<style rel="stylesheet/scss" lang="sass" scoped>
+<style rel="stylesheet/scss" lang="scss" scoped>
   .menu-item{
     *{vertical-align:middle;}
   }

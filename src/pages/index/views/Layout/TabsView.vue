@@ -27,7 +27,7 @@
   };
 </script>
 
-<style rel="stylesheet/scss" lang="sass" scoped>
+<style rel="stylesheet/scss" lang="scss" scoped>
   .tabs-view-container {
     display: inline-block;
     vertical-align: top;

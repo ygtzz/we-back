@@ -109,8 +109,8 @@
     box-shadow: 0 1px 3px rgba(0,0,0,.05);
   }
 </style>
-<style rel="stylesheet/scss" lang="sass" scoped>
-  @import "../../../../assets/css/mixin.scss";
+<style rel="stylesheet/scss" lang="scss" scoped>
+  @import "~assets/css/mixin.scss";
   .upload-container {
     width: 100%;
     position: relative;

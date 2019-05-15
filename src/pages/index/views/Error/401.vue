@@ -49,7 +49,7 @@
   };
 </script>
 
-<style rel="stylesheet/scss" lang="sass" scoped>
+<style rel="stylesheet/scss" lang="scss" scoped>
   .errPage-container {
     width: 800px;
     margin: 100px auto;

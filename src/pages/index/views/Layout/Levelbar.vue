@@ -35,7 +35,7 @@
   };
 </script>
 
-<style rel="stylesheet/scss" lang="sass" scoped>
+<style rel="stylesheet/scss" lang="scss" scoped>
   .app-levelbar.el-breadcrumb {
     display: inline-block;
     font-size: 14px;

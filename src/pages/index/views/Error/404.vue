@@ -25,7 +25,7 @@
   };
 </script>
 
-<style rel="stylesheet/scss" lang="sass" scoped>
+<style rel="stylesheet/scss" lang="scss" scoped>
   .wscn-http404 {
     position: relative;
     width: 1200px;
