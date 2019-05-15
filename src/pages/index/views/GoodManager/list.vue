@@ -108,7 +108,7 @@
       </el-table-column>
       
       <el-table-column align="center" width="100px" label="商品图片">
-        <template scope="scope">
+        <template slot-scope="scope">
           <img :src="scope.row.url" style="width: 64px;height: 64px;padding-top: 5px;"/>
         </template>
       </el-table-column>
@@ -117,7 +117,7 @@
       </el-table-column>
       
       <el-table-column align="center" min-width="200px" label="商品名称" sortable>
-        <template scope="scope">
+        <template slot-scope="scope">
           <span class="link-type" @click="handleUpdate(scope.row)">{{scope.row.title}}</span>
         </template>
       </el-table-column>
@@ -144,13 +144,13 @@
       </el-table-column>
       
       <el-table-column align="center" label="状态" width="100">
-        <template scope="scope">
+        <template slot-scope="scope">
           <el-tag :type="scope.row.status | statusFilter">{{scope.row.status ? '已上架' : '待上架'}}</el-tag>
         </template>
       </el-table-column>
       
       <el-table-column align="center" label="" width="40" fixed="right">
-        <template scope="scope">
+        <template slot-scope="scope">
           <el-popover
             ref="optionMenu"
             placement="bottom-end"

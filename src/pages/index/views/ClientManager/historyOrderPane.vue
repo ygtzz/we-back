@@ -38,7 +38,7 @@
               border fit highlight-current-row style="width: 100%">
       
       <el-table-column align="center" min-width="150" label="订单编码" prop="id">
-        <template scope="scope">
+        <template slot-scope="scope">
           <span class="link-type" @click="handleOrder(scope.row)">{{scope.row.id}}</span>
         </template>
       </el-table-column>
@@ -47,7 +47,7 @@
       </el-table-column>
       
       <el-table-column align="center" width="100" label="状态" prop="status">
-        <template scope="scope">
+        <template slot-scope="scope">
           <el-tag :type="scope.row.status | statusFilter">{{scope.row.status | statusFilterTip}}</el-tag>
         </template>
       </el-table-column>

@@ -114,13 +114,13 @@
       </el-table-column>
     
       <el-table-column align="center" min-width="100px" label="订单号" show-overflow-tooltip>
-        <template scope="scope">
+        <template slot-scope="scope">
           <span class="link-type" @click="handleDetail(scope.row)">{{scope.row.orderId}}</span>
         </template>
       </el-table-column>
   
       <el-table-column align="center" min-width="150px" label="订单编码" show-overflow-tooltip>
-        <template scope="scope">
+        <template slot-scope="scope">
           <span class="link-type" @click="handleDetail(scope.row)">{{scope.row.orderCode}}</span>
         </template>
       </el-table-column>
@@ -135,7 +135,7 @@
       </el-table-column>
     
       <el-table-column align="center" label="状态" width="100">
-        <template scope="scope">
+        <template slot-scope="scope">
           <el-tag :type="scope.row.status | statusFilter">{{scope.row.status | statusFilterTip}}</el-tag>
         </template>
       </el-table-column>

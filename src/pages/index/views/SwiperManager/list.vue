@@ -36,7 +36,7 @@
       </el-table-column>
       
       <el-table-column type="expand">
-        <template scope="props">
+        <template slot-scope="props">
           <el-form label-position="left" inline class="demo-table-expand">
             <el-form-item label="时间">
               <span>{{props.row.id}}</span>
@@ -54,25 +54,25 @@
       
       
       <el-table-column align="center" min-width="200px" label="名称">
-        <template scope="scope">
+        <template slot-scope="scope">
           <span class="link-type" @click="handleUpdate(scope.row)">{{scope.row.title}}</span>
         </template>
       </el-table-column>
       
       <el-table-column align="center" width="240px" label="轮播图">
-        <template scope="scope">
+        <template slot-scope="scope">
           <img :src="scope.row.url" style="width: 240px;height: 120px;padding-top: 5px;"/>
         </template>
       </el-table-column>
       
       <el-table-column align="center" label="状态" width="100">
-        <template scope="scope">
+        <template slot-scope="scope">
           <el-tag :type="scope.row.status | statusFilter">{{scope.row.status ? '已发布':'未发布'}}</el-tag>
         </template>
       </el-table-column>
       
       <el-table-column align="center" label="操作" width="150">
-        <template scope="scope">
+        <template slot-scope="scope">
           <el-button v-if="scope.row.status === 0" size="small" type="info" @click="handleModifyStatus(scope.row, 1)">发布
           </el-button>
           <el-button v-if="scope.row.status === 1" size="small" type="warning" @click="handleModifyStatus(scope.row, 0)">撤下

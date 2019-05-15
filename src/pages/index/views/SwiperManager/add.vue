@@ -52,25 +52,25 @@
             </el-table-column>
   
             <el-table-column align="center" width="120" label="商品主图">
-              <template scope="scope">
+              <template slot-scope="scope">
                 <img :src="scope.row.url" style="width: 120px;height: 100px;padding-top: 5px;"/>
               </template>
             </el-table-column>
             
             <el-table-column align="center" min-width="200" label="商品名称">
-              <template scope="scope">
+              <template slot-scope="scope">
                 <span class="link-type">{{scope.row.title}}</span>
               </template>
             </el-table-column>
   
             <el-table-column align="center" width="200" label="商品编码">
-              <template scope="scope">
+              <template slot-scope="scope">
                 <span class="link-type">{{scope.row.id}}</span>
               </template>
             </el-table-column>
     
             <el-table-column align="center" label="状态" width="100">
-              <template scope="scope">
+              <template slot-scope="scope">
                 <el-tag :type="scope.row.status | statusFilter">{{scope.row.status ? '可售':'停售'}}</el-tag>
               </template>
             </el-table-column>
@@ -93,25 +93,25 @@
       
           <el-table :data="goodSingleList" height="400" fit highlight-current-row style="width: 100%;margin-top: 10px;">
             <el-table-column align="center" width="120" label="商品主图">
-              <template scope="scope">
+              <template slot-scope="scope">
                 <img :src="scope.row.url" style="width: 120px;height: 100px;padding-top: 5px;"/>
               </template>
             </el-table-column>
         
             <el-table-column align="center" min-width="200" label="商品名称">
-              <template scope="scope">
+              <template slot-scope="scope">
                 <span class="link-type">{{scope.row.title}}</span>
               </template>
             </el-table-column>
         
             <el-table-column align="center" width="200" label="商品编码">
-              <template scope="scope">
+              <template slot-scope="scope">
                 <span class="link-type">{{scope.row.id}}</span>
               </template>
             </el-table-column>
         
             <el-table-column align="center" label="状态" width="100">
-              <template scope="scope">
+              <template slot-scope="scope">
                 <el-tag :type="scope.row.status | statusFilter">{{scope.row.status ? '可售':'停售'}}</el-tag>
               </template>
             </el-table-column>

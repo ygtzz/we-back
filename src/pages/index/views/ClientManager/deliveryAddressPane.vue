@@ -16,7 +16,7 @@
       </el-table-column>
       
       <el-table-column align="center" label="是否默认" width="100" prop="isDefault">
-        <template scope="scope">
+        <template slot-scope="scope">
           <el-tag :type="scope.row.isDefault | statusFilter">{{scope.row.isDefault ? '是' : '否'}}</el-tag>
         </template>
       </el-table-column>

@@ -30,7 +30,7 @@
       </el-table-column>
       
       <el-table-column align="center" width="240px" label="商品主图">
-        <template scope="scope">
+        <template slot-scope="scope">
           <img :src="scope.row.url" style="width: 100px;height: 100px;padding-top: 5px;"/>
         </template>
       </el-table-column>
@@ -45,7 +45,7 @@
       </el-table-column>
       
       <el-table-column align="center" label="状态" width="100">
-        <template scope="scope">
+        <template slot-scope="scope">
           <el-tag :type="scope.row.status | statusFilter">{{scope.row.status ? '可售' : '停售'}}</el-tag>
         </template>
       </el-table-column>

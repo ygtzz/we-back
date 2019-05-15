@@ -29,7 +29,7 @@
       </el-table-column>
       
       <el-table-column align="center" min-width="200" label="姓名" sortable>
-        <template scope="scope">
+        <template slot-scope="scope">
           <span class="link-type" @click="handleDetail(scope.row)">{{scope.row.name}}</span>
         </template>
       </el-table-column>
@@ -41,7 +41,7 @@
       </el-table-column>
       
       <el-table-column align="center" label="状态" width="120" sortable>
-        <template scope="scope">
+        <template slot-scope="scope">
           <el-tag :type="scope.row.status | statusFilter">{{scope.row.status ? '启用' : '禁用'}}</el-tag>
         </template>
       </el-table-column>
@@ -50,7 +50,7 @@
       </el-table-column>
       
       <el-table-column align="center" label="操作" width="150">
-        <template scope="scope">
+        <template slot-scope="scope">
           <el-button v-if="scope.row.status === 0" size="small" type="info" @click="handleModifyStatus(scope.row, 1)">启用
           </el-button>
           <el-button v-if="scope.row.status === 1" size="small" type="warning"

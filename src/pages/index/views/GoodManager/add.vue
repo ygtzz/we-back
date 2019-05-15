@@ -69,26 +69,26 @@
         </div>
         <el-table :data="postForm.skus" border fit highlight-current-row style="width: 100%">
           <el-table-column align="center" min-width="300px" label="规格名称">
-            <template scope="scope">
+            <template slot-scope="scope">
               <el-input size="small" v-model="scope.row.name"></el-input>
             </template>
           </el-table-column>
   
           <el-table-column align="center" width="200px" label="价格">
-            <template scope="scope">
+            <template slot-scope="scope">
               <el-input-number :controls="false" size="small" v-model="scope.row.price" :min="1"></el-input-number>
             </template>
           </el-table-column>
           
           <el-table-column align="center" width="300px" label="库存">
-            <template scope="scope">
+            <template slot-scope="scope">
               <el-input-number size="small" v-model="scope.row.stock" :min="1"></el-input-number>
               <el-checkbox size="small">无限库存</el-checkbox>
             </template>
           </el-table-column>
     
           <el-table-column align="center" label="操作" width="120">
-            <template scope="scope">
+            <template slot-scope="scope">
               <el-button size="small" type="danger" icon="delete">删除</el-button>
             </template>
           </el-table-column>

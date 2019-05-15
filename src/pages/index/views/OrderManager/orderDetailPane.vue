@@ -84,7 +84,7 @@
       <el-table ref="goodTable" :data="goodList" element-loading-text="拼命加载中" fit highlight-current-row style="width: 100%;"
                 show-summary :summary-method="getSummaries">
         <el-table-column align="center" width="100px" label="商品主图">
-          <template scope="scope">
+          <template slot-scope="scope">
             <img :src="scope.row.url" style="width: 60px;height: 60px;padding-top: 5px;"/>
           </template>
         </el-table-column>
