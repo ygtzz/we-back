@@ -37,7 +37,7 @@ module.exports = {
         new VueLoaderPlugin()
     ],
     resolve:{
-        modules: [ "node_modules", resolve('src'), sBase, sBase+"pages", sBase+"widget",sBase+'mock',sBase+'assets'],
+        modules: [ "node_modules", sBase, sBase+"pages", sBase+"widget",sBase+'mock',sBase+'assets'],
         extensions:['.vue','.js','.json'],
         alias: {
             'vue': 'vue/dist/vue.js',

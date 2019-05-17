@@ -5,7 +5,7 @@
 <script>
   import echarts from 'echarts';
   require('echarts/theme/macarons'); // echarts 主题
-  import { debounce } from '@/assets/js/tool';
+  import { debounce } from 'assets/js/tool';
 
   export default {
     props: {
