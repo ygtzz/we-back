@@ -28,7 +28,7 @@ module.exports = {
                 loader: 'url-loader',
                 options: {
                     limit: 1,
-                    name:'/static/fonts/[name].[ext]'
+                    name:'/assets/fonts/[name].[ext]'
                 }
             }
         ]
