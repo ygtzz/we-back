@@ -1,6 +1,7 @@
 <template>
   <div class="app-container calendar-list-container">
     <el-tree
+      
       :data="data2"
       :props="defaultProps"
       node-key="value"
@@ -106,7 +107,7 @@
             <span>
               <span>{node.label}</span>
             </span>
-            <span style="float: right; margin-right: 20px">
+            <span style="margin-left:20px;">
               <el-button-group>
                 <el-button size="mini" type="info" icon="plus" on-click={() => this.append(store, data)}>新增</el-button>
                 <el-button size="mini" type="warning" icon="edit" on-click={() => this.edit(store, data)}>编辑</el-button>
@@ -135,4 +136,9 @@
 </script>
 <style scoped>
 
+</style>
+<style>
+.el-tree-node.is-expanded>.el-tree-node__children {
+    margin-top: 15px;
+}
 </style>
